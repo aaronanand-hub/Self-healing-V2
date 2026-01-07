@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KINETIC — Variant B / UI Evolution</title>
+    <title>KINETIC — Disrupt the Norm</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
@@ -26,20 +26,20 @@
             transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
             border: 1px solid #222;
         }
-        /* UI Change: Unique Button Styling for Variant B */
-        .btn-add-cart {
-            background-color: #dfff00; /* Volt Neon */
-            color: #000;
-            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            box-shadow: 0 0 0 rgba(223, 255, 0, 0);
-        }
-        .btn-add-cart:hover {
-            transform: scale(1.05);
-            background-color: #fff;
-            box-shadow: 0 10px 25px -5px rgba(223, 255, 0, 0.4);
+        .product-card:hover {
+            background: #161616;
+            transform: translateY(-10px);
+            border-color: #dfff00;
         }
         .neon-accent {
-            color: #dfff00;
+            color: #dfff00; /* Volt/Neon Green */
+        }
+        .btn-neon {
+            background-color: #dfff00;
+            color: #000;
+        }
+        .btn-neon:hover {
+            background-color: #fff;
         }
         .image-container {
             background: linear-gradient(135deg, #111 0%, #222 100%);
@@ -53,105 +53,87 @@
         <div class="pill-nav flex items-center justify-between px-6 py-3 rounded-full shadow-2xl">
             <div class="text-xl font-black tracking-tighter">KINETIC</div>
             <div class="hidden md:flex space-x-6 text-[10px] font-bold uppercase tracking-widest">
-                <a href="#" class="hover:text-neon-accent transition">Collection</a>
                 <a href="#" class="hover:text-neon-accent transition">Labs</a>
-                <a href="#" class="hover:text-neon-accent transition">Access</a>
+                <a href="#" class="hover:text-neon-accent transition">Drops</a>
+                <a href="#" class="hover:text-neon-accent transition">Community</a>
             </div>
             <div class="flex items-center space-x-4">
-                <span class="cursor-pointer text-sm font-bold">BAG (0)</span>
+                <span class="cursor-pointer hover:scale-110 transition">🛍️</span>
+                <button class="md:hidden text-lg">☰</button>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+        <!-- Unbranded Silhouette Silhouette Background -->
         <img src="https://images.unsplash.com/photo-1483721310020-03333e577078?auto=format&fit=crop&q=80&w=1200" alt="Unbranded Athletic Silhouette" class="absolute inset-0 w-full h-full object-cover opacity-40 scale-110">
         <div class="relative z-10 text-center px-4">
-            <p class="text-neon-accent font-bold tracking-[0.4em] mb-4 text-xs uppercase">Series 01 / Kinetic</p>
-            <h1 class="text-7xl md:text-[12rem] leading-none mb-4 italic tracking-tighter">Motion<br><span class="neon-accent">Lab</span></h1>
-            <button class="bg-white text-black px-12 py-5 rounded-full font-black text-xs uppercase tracking-[0.2em] transition-all hover:bg-neon-accent">View Series</button>
+            <p class="text-neon-accent font-bold tracking-[0.4em] mb-4 text-xs uppercase">Local Performance Project</p>
+            <h1 class="text-7xl md:text-[12rem] leading-none mb-4 italic tracking-tighter">Velocity<br><span class="neon-accent">Prime</span></h1>
+            <p class="max-w-md mx-auto text-gray-400 text-sm md:text-base mb-8 uppercase tracking-widest">Engineered for those who refuse to stop. The next evolution of unbranded performance gear.</p>
+            <button class="btn-neon px-12 py-5 rounded-full font-black text-xs uppercase tracking-[0.2em] transition-all hover:scale-105">Start Training</button>
+        </div>
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-30">
+            <span class="text-xs tracking-widest font-bold">SCROLL</span>
         </div>
     </section>
 
-    <!-- Product Section -->
+    <!-- Masonry Grid Section -->
     <main class="max-w-7xl mx-auto px-6 py-24">
-        <div class="flex justify-between items-baseline mb-16">
-            <h2 class="text-5xl">Elite Gear</h2>
-            <p class="text-gray-500 font-bold tracking-widest text-xs uppercase">Variant B UI</p>
+        <div class="flex flex-col md:flex-row justify-between items-baseline mb-16 gap-4">
+            <h2 class="text-5xl">The Lineup</h2>
+            <p class="text-gray-500 font-bold tracking-widest text-xs uppercase">Curated Local Essentials // 2024</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 items-start">
             
-            <!-- Item 1 -->
-            <div class="product-card p-6 rounded-[2.5rem]">
-                <div class="aspect-square overflow-hidden rounded-[1.5rem] mb-8 image-container flex items-center justify-center">
-                    <img src="https://placehold.co/400x400/111/dfff00?text=CORE+BOOT" alt="Unbranded Footwear" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700">
+            <!-- Item 1: Large Feature (Unbranded Placeholder) -->
+            <div class="product-card p-6 rounded-[2rem] lg:row-span-2">
+                <div class="aspect-[3/4] overflow-hidden rounded-2xl mb-8 image-container flex items-center justify-center">
+                    <img src="https://placehold.co/600x800/111/dfff00?text=PERFORMANCE+BOOT" alt="Unbranded Footwear" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700">
                 </div>
-                <div class="flex justify-between items-start mb-6">
-                    <div>
-                        <h3 class="text-xl font-bold uppercase tracking-tight">Core Runner 1</h3>
-                        <p class="text-gray-500 text-xs mt-1">Responsive Polymer Sole</p>
-                    </div>
-                    <p class="font-black text-lg">$180</p>
-                </div>
-                <!-- UI Change: Redesigned Add to Cart for Variant B -->
-                <button onclick="addToBag('Core Runner 1')" class="btn-add-cart w-full py-4 rounded-full font-black text-[11px] uppercase tracking-widest flex items-center justify-center gap-2">
-                    <span>Add to Bag</span>
-                    <span class="text-lg opacity-40">+</span>
-                </button>
+                <h3 class="text-3xl mb-2">Aero-Core 1</h3>
+                <p class="text-gray-500 text-sm mb-6 leading-relaxed">Proprietary carbon-infused composite sole for maximum energy return during high-intensity training.</p>
+                <button onclick="acquireItem('Aero-Core 1')" class="w-full py-4 border border-white/20 rounded-full font-bold text-[10px] tracking-widest hover:bg-white hover:text-black transition">ACQUIRE — $180</button>
             </div>
 
-            <!-- Item 2 -->
-            <div class="product-card p-6 rounded-[2.5rem]">
-                <div class="aspect-square overflow-hidden rounded-[1.5rem] mb-8 image-container flex items-center justify-center">
-                    <img src="https://placehold.co/400x400/111/ffffff?text=TECH+TEE" alt="Unbranded Apparel" class="w-full h-full object-cover">
+            <!-- Item 2 (Unbranded Placeholder) -->
+            <div class="product-card p-6 rounded-[2rem]">
+                <div class="aspect-square overflow-hidden rounded-2xl mb-8 image-container flex items-center justify-center">
+                    <img src="https://placehold.co/400x400/111/ffffff?text=TECH+VEST" alt="Unbranded Apparel" class="w-full h-full object-cover">
                 </div>
-                <div class="flex justify-between items-start mb-6">
-                    <div>
-                        <h3 class="text-xl font-bold uppercase tracking-tight">K-Shield Tee</h3>
-                        <p class="text-gray-500 text-xs mt-1">Advanced Moisture Wick</p>
-                    </div>
-                    <p class="font-black text-lg">$65</p>
-                </div>
-                <button onclick="addToBag('K-Shield Tee')" class="btn-add-cart w-full py-4 rounded-full font-black text-[11px] uppercase tracking-widest flex items-center justify-center gap-2">
-                    <span>Add to Bag</span>
-                    <span class="text-lg opacity-40">+</span>
-                </button>
+                <h3 class="text-xl mb-1">Thermal Shield Tee</h3>
+                <p class="text-gray-500 text-xs mb-6 uppercase tracking-widest">Base Layer / Series 01</p>
+                <button onclick="acquireItem('Thermal Shield')" class="w-full py-3 bg-white text-black rounded-full font-bold text-[10px] tracking-widest hover:bg-neon-accent transition">ACQUIRE — $65</button>
             </div>
 
-            <!-- Item 3 -->
-            <div class="product-card p-6 rounded-[2.5rem]">
-                <div class="aspect-square overflow-hidden rounded-[1.5rem] mb-8 image-container flex items-center justify-center">
-                    <img src="https://placehold.co/400x400/111/dfff00?text=GRIP+GLOVE" alt="Unbranded Gear" class="w-full h-full object-cover grayscale">
+            <!-- Item 3 (Unbranded Placeholder) -->
+            <div class="product-card p-6 rounded-[2rem]">
+                <div class="aspect-square overflow-hidden rounded-2xl mb-8 image-container flex items-center justify-center">
+                    <img src="https://placehold.co/400x400/111/dfff00?text=GRIP+GLOVE" alt="Unbranded Gear" class="w-full h-full object-cover">
                 </div>
-                <div class="flex justify-between items-start mb-6">
-                    <div>
-                        <h3 class="text-xl font-bold uppercase tracking-tight">Power Grips</h3>
-                        <p class="text-gray-500 text-xs mt-1">Tactile Friction Tech</p>
-                    </div>
-                    <p class="font-black text-lg">$130</p>
-                </div>
-                <button onclick="addToBag('Power Grips')" class="btn-add-cart w-full py-4 rounded-full font-black text-[11px] uppercase tracking-widest flex items-center justify-center gap-2">
-                    <span>Add to Bag</span>
-                    <span class="text-lg opacity-40">+</span>
-                </button>
+                <h3 class="text-xl mb-1">Gravity Grips</h3>
+                <p class="text-gray-500 text-xs mb-6 uppercase tracking-widest">Training Gear / Stealth</p>
+                <button onclick="acquireItem('Gravity Grips')" class="w-full py-3 border border-white/20 rounded-full font-bold text-[10px] tracking-widest hover:bg-white hover:text-black transition">ACQUIRE — $130</button>
             </div>
 
         </div>
     </main>
 
-    <!-- Status Modal -->
+    <!-- UI Custom Modal -->
     <div id="status-modal" class="fixed inset-0 bg-black/95 hidden items-center justify-center p-6 z-[100] backdrop-blur-xl">
-        <div class="text-center">
-            <div class="text-6xl mb-6 neon-accent italic font-bold-display tracking-tighter">ADDED</div>
-            <p class="text-gray-400 mb-8 text-sm uppercase tracking-[0.3em]">Selection confirmed in local bag</p>
-            <button onclick="closeModal()" class="border-b-2 border-white pb-1 font-black text-xs tracking-widest uppercase">Continue</button>
+        <div class="text-center max-w-sm">
+            <div class="text-8xl mb-8 neon-accent italic font-bold-display">SUCCESS</div>
+            <h3 class="text-2xl font-bold mb-4 uppercase tracking-tighter">Gear Secured</h3>
+            <p class="text-gray-400 mb-8 text-sm leading-relaxed">Your selection has been added to your local local inventory. Everything is simulated and stored in-memory.</p>
+            <button onclick="closeModal()" class="btn-neon w-full py-4 rounded-full font-black text-xs tracking-widest uppercase">Keep Exploring</button>
         </div>
     </div>
 
     <script>
-        function addToBag(name) {
-            console.log(`Local UI Action: ${name} added.`);
+        function acquireItem(name) {
+            console.log(`Local Simulation Log: ${name} added.`);
             const modal = document.getElementById('status-modal');
             modal.classList.remove('hidden');
             modal.classList.add('flex');
